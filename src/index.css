@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+@import './styles/base.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colors */
+  --color-primary: #e35701;
+  --color-primary-hover: #f7660b;
+  --color-text: rgba(255, 255, 255, 0.74);
+  --color-heading: #ffffff;
+  --color-background: #000000;
+  --color-background-alt: #181818;
+  --color-border: rgba(255, 255, 255, 0.2);
+  --color-accent: #94a3b8;
+
+  /* Typography */
+  --font-family-base: 'Open Sans', sans-serif;
+  --font-family-heading: 'Roboto', sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.85714285714286;
+  
+  /* Layout */
+  --container-width: 1200px;
+  --container-padding: 3em;
+  --grid-gap: 2rem;
+  
+  /* Borders */
+  --border-radius: 3px;
+  --border-width: 1px;
+  
+  /* Transitions */
+  --transition-base: all 0.2s ease;
+}
+
+@layer base {
+  body {
+    @apply bg-[#000000] text-[rgba(255,255,255,0.74)];
+    font-family: var(--font-family-base);
+    line-height: var(--line-height-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-white font-heading font-semibold mb-4;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1200px] mx-auto px-12;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-[3px] font-medium transition-all;
+  }
+
+  .btn-primary {
+    @apply bg-[#e35701] text-white hover:bg-[#f7660b];
+  }
+
+  .btn-secondary {
+    @apply bg-[#181818] text-white hover:bg-[#101217];
+  }
+
+  .input {
+    @apply bg-[#181818] border border-[rgba(255,255,255,0.2)] rounded-[3px] px-4 py-3 text-white;
+  }
+
+  .card {
+    @apply bg-[#181818] rounded-[3px] p-6;
+  }
+}

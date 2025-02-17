@@ -1,0 +1,207 @@
+/* Reset and Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography Base */
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-family-base);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background: var(--background);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #808285;
+    font-family: var(--font-family-heading);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+strong, b {
+    font-weight: 700;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub {
+    font-size: 75%;
+}
+
+cite, em, dfn {
+    font-style: italic;
+}
+
+/* Links */
+a {
+    color: #4169e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover, a:focus {
+    color: #191970;
+}
+
+/* Form Elements */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    padding: 0.5em 1em;
+    background: var(--background-input);
+    transition: all 0.2s ease;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4169e1;
+    box-shadow: 0 0 0 2px rgba(65, 105, 225, 0.2);
+}
+
+/* Layout Classes */
+.ast-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.ast-container-fluid {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* Grid System */
+.ast-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.ast-width-50 {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .ast-width-md-4 {
+        width: 33.333333%;
+    }
+    
+    .ast-width-50 {
+        width: 50%;
+    }
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+}
+
+/* Buttons */
+.ast-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ast-button:hover,
+.ast-button:focus {
+    background: var(--primary-dark);
+    color: white;
+}
+
+/* Layout Utilities */
+.ast-full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid var(--primary);
+    padding: 1em 0 1em 1em;
+    margin: 1em 0;
+    font-style: italic;
+}
+
+/* Code Blocks */
+pre, code {
+    font-family: 'Courier New', Courier, monospace;
+    background: var(--background-dark);
+    padding: 0.2em 0.4em;
+    border-radius: 2px;
+}
+
+pre {
+    padding: 1em;
+    overflow-x: auto;
+}
+
+/* Accessibility */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+/* Focus States */
+:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+:root {
+  /* Brand Colors */
+  --color-primary: #FFD700;
+  --color-primary-hover: #FFE55C;
+  /* ... other variables remain the same ... */
+} 
